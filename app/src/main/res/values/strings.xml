@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Resep Mamah</string>
+    <string name="title_error">Error</string>
+    <string name="title_error_content">Terjadi kesalahan</string>
+    <string name="title_error_ok">Oke</string>
+    <string name="title_activity_detail_recipes">Detail Recipe</string>
+    <string name="large_text">
+        "MResep Kroket Nasi Goreng Keju jadi solusi kelebihan bahan makanan yang telah kamu masak. Sesuai namanya, kamu bisa memanfaatkan nasi goreng yang tersisa setelah menikmati makan pagi bersama keluarga untuk nanti dimanfaatkan sebagai camilan lezat di akhir hari.Bahkan untuk nasi goreng kemarin, kamu bisa memanfaatkannya sebagai menu sarapan. Cukup dengan mencampurkannya dengan keju, jagung, dan kacang polong, lalu bentuk bulat seperti kroket. Salut dengan tepung terigu yang sudah dibumbui Royco Kaldu Ayam, balur dengan telur, dan kembali salut dengan tepung. Diamkan selama beberapa waktu di freezer. Terakhir, goreng hingga keemasan dan sajikan bersama saus, mayones, serta sedikit perasan jeruk lemon agar segar.Siapkan berbagai resep camilan lainnya untuk berbuka puasa di bulan Ramadan tahun ini dengan Martabak Udang Tahu, Tahu Bakso, serta Sosis Gulung Mie. Pasti meriah!"
+    </string>
+    <string name="action_settings">Settings</string>
+
+</resources>

@@ -1,0 +1,132 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.vickykdv.resepmamah"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'baseUrl', '"https://masak-apa.tomorisakura.vercel.app/api/"'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'baseUrl', '"https://masak-apa.tomorisakura.vercel.app/api/"'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+}
+
+ext {
+
+    lifecycle_version = "2.3.0"
+    glide_version = "4.11.0"
+    lottie_version = "3.4.0"
+    shimmer_version = "0.5.0"
+
+
+    dagger_version = "2.28-alpha"
+    hilt_lifecyc_dagger_version = "1.0.0-alpha02"
+    fragment_version = "1.3.0"
+    activity_version = "1.2.0"
+
+    retrofit2_version = "2.9.0"
+    okhttp_version = "4.9.0"
+
+    rxandroid_version = "2.1.1"
+    rxjava_version = "2.2.10"
+    rxbinding_version = "3.0.0"
+    retrofit2_rx_version = "2.6.1"
+
+    chucker_version = "3.2.0"
+
+    paging_version = "2.1.2"
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Dagger Hilt
+    implementation "com.google.dagger:hilt-android:$dagger_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "com.google.dagger:hilt-android-compiler:$dagger_version"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_lifecyc_dagger_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_lifecyc_dagger_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+
+    //Library Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    //Library RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "com.jakewharton.rxbinding3:rxbinding:$rxbinding_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_rx_version"
+
+    //Chucker
+//    implementation "com.github.chuckerteam.chucker:library:$chucker_version"
+
+    //Shimmer
+    implementation "com.facebook.shimmer:shimmer:$shimmer_version"
+
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
+    implementation "androidx.paging:paging-rxjava2-ktx:$paging_version"
+
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //Blur
+//    implementation 'com.eightbitlab:blurview:1.6.6'
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+}
